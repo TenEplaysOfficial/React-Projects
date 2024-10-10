@@ -2,16 +2,19 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const projectData = [
+    // Desc 300 char
     {
-      title: "Counter",
-      description: "The Counter Project is a simple yet engaging application built using React that demonstrates the fundamentals of state management and user interaction. This project allows users to increment, decrement, and reset a counter, providing a hands-on experience with React's powerful component-based architecture.",
-      link: "project-counter",
+      title: "To-do list",
+      description:
+        "The Todo List component allows users to manage tasks effectively. It features an input field for adding new tasks and a Submit button. Users can view tasks in a list, with a Remove button for each task. Tasks are stored in local storage for persistence, and duplicates are prevented with an alert, ensuring an organized user experience.",
+      link: "project-todolist",
     },
 
     {
-      title: "To-do list",
-      description: "This is To-do list project",
-      link: "project-todolist",
+      title: "Counter",
+      description:
+        "The Counter Project is a React app that teaches state management and user interaction. Users can increment, decrement, and reset a counter, demonstrating React's component-based structure. It showcases state handling with hooks, allowing real-time updates and responsive UIs, helping users grasp core React concepts.",
+      link: "project-counter",
     },
   ];
 
