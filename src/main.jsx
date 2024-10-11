@@ -1,10 +1,15 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
+
+const router = createHashRouter([
+  {
+    path: "/*",
+    element: <App />,
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/React-Projects/">
-    <App />
-  </BrowserRouter>
+  <RouterProvider router={router} />
 );
