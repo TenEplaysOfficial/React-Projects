@@ -18,6 +18,7 @@ function Counter() {
   return (
     <>
       <Backbtn />
+    <div className="hero">
       <div className="counter-project">
         <h1 className="title-big">Count is {count}</h1>
         <button onClick={increment} className="button">
@@ -29,6 +30,7 @@ function Counter() {
         <button onClick={decrement} className="button">
           Decrement
         </button>
+      </div>
       </div>
     </>
   );

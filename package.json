@@ -1,5 +1,6 @@
 {
   "name": "react-projects",
+  "homepage": "https://teneplaysofficial.github.io/React-Projects/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +11,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2"
+    "react-icons": "^5.3.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.26.2",
+    "remark-gfm": "^4.0.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

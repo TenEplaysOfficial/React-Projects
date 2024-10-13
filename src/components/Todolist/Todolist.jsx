@@ -43,31 +43,33 @@ function Todolist() {
   return (
     <>
       <Backbtn />
-      <div className="todolist">
-        <h1 className="title-big ">Todo list</h1>
-        <div className="input-container">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={inputText}
-            placeholder="Add a new Task"
-            className="input-task"
-          ></input>
-          <button className="button" onClick={addTask}>
-            Submit
-          </button>
-        </div>
-        <ul className="list-container">
-          {tasks.map((task, index) => (
-            <li key={index}>
-              <span>{task}</span>
+      <div className="hero">
+        <div className="todolist">
+          <h1 className="title-big ">Todo list</h1>
+          <div className="input-container">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={inputText}
+              placeholder="Add a new Task"
+              className="input-task"
+            ></input>
+            <button className="button" onClick={addTask}>
+              Submit
+            </button>
+          </div>
+          <ul className="list-container">
+            {tasks.map((task, index) => (
+              <li key={index}>
+                <span>{task}</span>
 
-              <button className="button" onClick={() => removeTask(index)}>
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
+                <button className="button" onClick={() => removeTask(index)}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
