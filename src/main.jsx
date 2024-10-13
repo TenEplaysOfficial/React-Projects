@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "project-counter",
+        path: "project-quizapp",
         element: <QuizApp />,
       },
       {
