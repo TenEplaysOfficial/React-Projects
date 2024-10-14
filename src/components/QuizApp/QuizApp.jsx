@@ -9,7 +9,16 @@ function QuizApp() {
   const [score, setScore] = useState(0);
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
+  
+  useEffect(() => {
+    const originalTitle = document.title;
+  
+    document.title = "Quiz App";
+    return () => {
+      document.title = originalTitle;
+    };
+  }, []);
+  
   useEffect(() => {
     fetch(`https://opentdb.com/api.php?amount=10`)
       .then((response) => {
@@ -82,6 +91,7 @@ function QuizApp() {
     );
   }
 
+
   return (
     <>
       <Backbtn />
@@ -90,7 +100,9 @@ function QuizApp() {
           Quiz App
         </h1>
         {isLoading ? ( // Show loading message while fetching
-          <p className="p-5 text-center font-bold font-sans text-base ">Loading data...</p>
+          <p className="p-5 text-center font-bold font-sans text-base ">
+            Loading data...
+          </p>
         ) : (
           quiz.length > 0 && (
             <div>
@@ -150,14 +162,18 @@ function QuizApp() {
                   if (question) {
                     return (
                       <div key={index}>
-                        <p className="mt-2">Question {index + 1}: 
-                        {answer === question.correct_answer ? (
-                          <span className="text-green-500 pl-2">Correct</span>
-                        ) : answer ? (
-                          <span className="text-red-500 pl-2">Incorrect</span>
-                        ) : (
-                          <span className="text-gray-500 pl-2">Not answered</span>
-                        )}</p>
+                        <p className="mt-2">
+                          Question {index + 1}:
+                          {answer === question.correct_answer ? (
+                            <span className="text-green-500 pl-2">Correct</span>
+                          ) : answer ? (
+                            <span className="text-red-500 pl-2">Incorrect</span>
+                          ) : (
+                            <span className="text-gray-500 pl-2">
+                              Not answered
+                            </span>
+                          )}
+                        </p>
                       </div>
                     );
                   }

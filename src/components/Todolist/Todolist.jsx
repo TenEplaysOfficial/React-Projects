@@ -16,6 +16,15 @@ function Todolist() {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
+    const originalTitle = document.title;
+  
+    document.title = "Todo list";
+    return () => {
+      document.title = originalTitle;
+    };
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
