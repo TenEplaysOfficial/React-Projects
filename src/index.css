@@ -333,3 +333,25 @@ hr{
   justify-content: center;
   margin-top: 5px;
 }
+
+
+/* todo list */
+@keyframes popErrorMsg {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  animation: popErrorMsg 0.3s forwards;
+}

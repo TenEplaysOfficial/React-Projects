@@ -50,42 +50,56 @@ function RockPaperScissors() {
   return (
     <>
       <Backbtn />
-      <h1 className="title-big">Rock Paper Scissors</h1>
-      <div className="flex justify-center flex-col items-center">
-        Choice
-        <div className="flex justify-center gap-10 border-solid  border-4 border-black rounded-full items-center pt-6 px-5  ">
+      <h1 className="text-4xl font-bold text-center mb-6">
+        Rock Paper Scissors
+      </h1>
+      <div className="flex justify-center flex-col items-center w-full h-fit">
+        <h2 className="text-xl font-semibold mb-4">Choice</h2>
+        <p className="text-md text-gray-600 mb-4">
+          Please select one of the options below:
+        </p>
+        <div className="flex justify-center gap-6 md:gap-10 border-solid border-4 border-black rounded-full items-center pt-6 px-4 md:px-5">
           <img
             src={rockPic}
             alt="Rock"
             onClick={() => handleInput(choices[0])}
-            className="w-28 h-28 hover:animate-rotateInfinite"
+            className="w-20 h-20 md:w-28 md:h-28 hover:animate-rotateInfinite"
           />
-
           <img
             src={papperPic}
             alt="Paper"
             onClick={() => handleInput(choices[1])}
-            className="w-28 h-28 hover:animate-rotateInfinite"
+            className="w-20 h-20 md:w-28 md:h-28 hover:animate-rotateInfinite"
           />
           <img
             src={scissorPic}
             alt="Scissor"
             onClick={() => handleInput(choices[2])}
-            className="w-28 h-28 hover:animate-rotateInfinite"
+            className="w-20 h-20 md:w-28 md:h-28 hover:animate-rotateInfinite"
           />
         </div>
-        <div className="flex justify-around gap-10 mt-8 w-full">
-          <div>
-            <h3>User dashboard</h3>
-            <p>{userScore}</p>
+        <div className="flex flex-col md:flex-row justify-between gap-6 mt-8 w-full p-4 rounded-lg">
+          <div className="flex-1 text-center bg-white border-black border-2 rounded-3xl p-4 md:p-6 shadow-lg order-1 md:order-2">
+            <h2 className="font-semibold text-lg text-gray-700  mb-2">
+              Current Round
+            </h2>
+            <p className="text-2xl font-bold text-blue-600">{result}</p>
+            <p className="text-sm text-gray-500">Your Pick: {userChoice}</p>
+            <p className="text-sm text-gray-500">
+              Computer Pick: {computerChoice}
+            </p>
           </div>
-          <div>
-          <h2>Result</h2>
-          <p>{result}</p>
+          <div className="flex-1 text-center bg-white border-black border-2 rounded-3xl p-4 md:p-6 shadow-lg order-2 md:order-1">
+            <h3 className="font-semibold text-lg text-gray-700 mb-2">
+              Your Score
+            </h3>
+            <p className="text-2xl font-bold text-blue-600">{userScore}</p>
           </div>
-          <div>
-            <h3>Computer dashboard</h3>
-            <p>{computerScore}</p>
+          <div className="flex-1 text-center bg-white border-black border-2 rounded-3xl p-4 md:p-6 shadow-lg order-3">
+            <h3 className="font-semibold text-lg text-gray-700 mb-2">
+              Computer Score
+            </h3>
+            <p className="text-2xl font-bold text-blue-600">{computerScore}</p>
           </div>
         </div>
       </div>
