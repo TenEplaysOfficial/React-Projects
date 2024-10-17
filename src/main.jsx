@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import Counter from "./components/Counter/Counter.jsx";
 import Todolist from "./components/Todolist/Todolist.jsx";
 import QuizApp from "./components/QuizApp/QuizApp.jsx";
+import RockPaperScissors from "./components/Rock-Paper-Scissors/RockPaperScissors.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "project-rock-paper-scissors",
+        element: <RockPaperScissors />,
       },
       {
         path: "project-quizapp",

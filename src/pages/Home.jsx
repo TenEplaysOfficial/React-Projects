@@ -7,7 +7,7 @@ function Home() {
       <div className="home">
         <h1 className="title-big">Projects</h1>
         <div className="projects-item">
-          {projectData.map((details, i) => {
+          {projectData.slice(0,6).map((details, i) => {
             return (
               <div key={i} className="project-card">
                 <h2 className="title-mid reduce-font">{details.title}</h2>

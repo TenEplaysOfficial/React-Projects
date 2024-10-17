@@ -4,13 +4,20 @@ import { useEffect, useState } from "react";
 function Todolist() {
   const taskData = () => {
     try {
-      const saveData = localStorage.getItem("tasks");
-      return saveData ? JSON.parse(saveData) : ["Task 1", "Task 2"];
+      // Ensure localStorage is accessible
+      if (typeof localStorage !== "undefined") {
+        const saveData = localStorage.getItem("tasks");
+        return saveData ? JSON.parse(saveData) : ["Task 1", "Task 2"];
+      } else {
+        console.warn("localStorage is not available in this environment.");
+        return ["Task 1", "Task 2"];
+      }
     } catch (error) {
       console.error("Failed to retrieve tasks from local storage:", error);
       return ["Task 1", "Task 2"];
     }
   };
+  
 
   const [tasks, setTasks] = useState(taskData);
   const [inputValue, setInputValue] = useState("");

@@ -1,11 +1,19 @@
 export const projectData = [
   // Desc 300 char
-{
-  title:"Quiz App",
-  description:"The Quiz App is an interactive React application that fetches trivia questions from the Open Trivia Database. Users can select answers, receive immediate feedback, and view their scores upon completion. The app tracks answer status, allowing easy restarts for improved performance, making it a fun and educational experience for all ages.",
-  link:"project-quizapp",
-},
- 
+  {
+    title: "Rock Paper Scissors Game",
+    description:
+      " Build an interactive Rock Paper Scissors game using React.js. Players compete against the computer by selecting rock, paper, or scissors. The app dynamically determines the winner, tracks scores, and offers a fun and engaging way to learn React state management and event handling.",
+    link: "project-rock-paper-scissors",
+  },
+  
+  {
+    title: "Quiz App",
+    description:
+      "The Quiz App is an interactive React application that fetches trivia questions from the Open Trivia Database. Users can select answers, receive immediate feedback, and view their scores upon completion. The app tracks answer status, allowing easy restarts for improved performance, making it a fun and educational experience for all ages.",
+    link: "project-quizapp",
+  },
+
   {
     title: "To-do list",
     description:
