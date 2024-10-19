@@ -1,6 +1,11 @@
 export const projectData = [
   // Desc 300 char
   {
+    title:"Calculator",
+    description:"This React Calculator component features a simple UI with a title, display, and input buttons for basic arithmetic operations. It manages state with hooks, updating the display based on user input. Functions handle operations like addition, subtraction, and clearing input, ensuring a responsive user experience while preventing errors.",
+    link:"project-Calculator"
+  },
+  {
     title: "Rock Paper Scissors Game",
     description:
       " Build an interactive Rock Paper Scissors game using React.js. Players compete against the computer by selecting rock, paper, or scissors. The app dynamically determines the winner, tracks scores, and offers a fun and engaging way to learn React state management and event handling.",
