@@ -9,7 +9,7 @@ function Backbtn({ text = "Go Back", steps = 1 }) {
 
     // If the history length is less than or equal to the steps, redirect to the base URL
     if (historyLength <= steps) {
-      window.location.href = "/React-Projects/"; 
+      window.location.href = "/React-Projects/";
     } else {
       navigate(-steps);
     }

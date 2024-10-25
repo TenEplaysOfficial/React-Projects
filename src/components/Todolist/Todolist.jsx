@@ -20,7 +20,7 @@ function Todolist() {
   const [tasks, setTasks] = useState(taskData);
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(null);
-  const inputRef = useRef(null); // To keep track of the input field for autofocus
+  const inputRef = useRef(null);
 
   useEffect(() => {
     const originalTitle = document.title;
@@ -39,15 +39,15 @@ function Todolist() {
     if (error) {
       const timer = setTimeout(() => {
         setError(null);
-      }, 3000); // Remove error after 3 seconds
+      }, 3000);
 
-      return () => clearTimeout(timer); // Cleanup timer on unmount or update
+      return () => clearTimeout(timer);
     }
   }, [error]);
 
   const inputText = (e) => {
     setInputValue(e.target.value);
-    setError(null); // Clear error when typing
+    setError(null);
   };
 
   const addTask = () => {
@@ -62,21 +62,27 @@ function Todolist() {
 
     if (!taskExists) {
       setTasks([...tasks, inputValue.trim()]);
-      setError(null); // Clear error after successful addition
+      setError(null);
     } else {
       setError("Task already exists!");
     }
 
     setInputValue("");
-    inputRef.current.focus(); // Autofocus on input after adding or attempting to add a task
+    inputRef.current.focus();
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      addTask();
+    }
   };
 
   const removeTask = (index) => {
     const taskToDelete = tasks[index];
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
-    setError(`Task '${taskToDelete}' has been removed.`); // Show error message with task name
-    inputRef.current.focus(); // Autofocus on input after removing a task
+    setError(`Task '${taskToDelete}' has been removed.`);
+    inputRef.current.focus();
   };
 
   return (
@@ -90,6 +96,7 @@ function Todolist() {
               type="text"
               value={inputValue}
               onChange={inputText}
+              onKeyDown={handleKeyDown}
               placeholder="Add a new Task"
               className="input-task"
               ref={inputRef} // Attach ref to the input field

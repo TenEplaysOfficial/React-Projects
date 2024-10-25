@@ -42,7 +42,7 @@ ul {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .title-big {
@@ -62,7 +62,6 @@ ul {
   font-weight: 500;
 }
 
-
 .title-small {
   text-align: center;
   font-size: 1.5rem;
@@ -70,10 +69,10 @@ ul {
   font-weight: 500;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
   .title-small {
-  font-weight: 600;
-  font-size: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
   }
 }
 
@@ -82,10 +81,9 @@ ul {
   border: 2px solid #1c1c1d;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
   color: #1a202c;
   font-family: "Poppins", sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 700;
   width: auto;
   padding: 12px 24px;
@@ -208,25 +206,25 @@ li span {
   .title-big {
     font-size: 2.5rem;
   }
-  
+
   .title-mid {
     font-size: 2rem;
   }
-  
+
   .button {
     font-size: 0.9rem;
     padding: 10px 20px;
   }
-  
+
   .projects-item {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   .project-card {
     max-width: 100%;
     height: auto;
   }
-  
+
   .description {
     margin: 10px;
   }
@@ -239,17 +237,17 @@ li span {
     font-size: 0.9rem;
     padding: 10px 20px;
   }
-  
+
   .input-task {
     font-size: 0.9rem;
     padding: 10px 12px;
   }
-  
+
   li {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   li .button {
     margin-top: 10px;
   }
@@ -266,12 +264,12 @@ li span {
   .title-mid {
     font-size: 1.5rem;
   }
-  
+
   .button {
     font-size: 0.8rem;
     padding: 8px 16px;
   }
-  
+
   .input-task {
     width: 100%;
     font-size: 0.8rem;
@@ -281,28 +279,28 @@ li span {
   .projects-item {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   .project-card {
     max-width: 100%;
     height: auto;
   }
-  
+
   .description {
     margin: 5px;
   }
-  
+
   .list-container {
     width: 100%;
   }
-  
+
   li {
     padding: 8px;
   }
-  
+
   li span {
     font-size: 0.9rem;
   }
-  
+
   li .button {
     min-width: 80px;
   }
@@ -310,30 +308,29 @@ li span {
 
 /* Markdown Editor */
 
-.md-hero{
+.md-hero {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 1rem;
 }
 
-hr{
+hr {
   height: 4px;
   background-color: #888;
   margin: 1px 0;
 }
 
-.vr{
+.vr {
   border-left: 6px solid #888;
   height: 100vh;
 }
 
-.md-container{
+.md-container {
   display: flex;
   justify-content: center;
   margin-top: 5px;
 }
-
 
 /* todo list */
 @keyframes popErrorMsg {
@@ -347,7 +344,6 @@ hr{
   }
 }
 
-
 .error-message {
   color: red;
   font-weight: bold;
@@ -355,3 +351,17 @@ hr{
   text-align: center;
   animation: popErrorMsg 0.3s forwards;
 }
+
+
+/* Hide Scrollbar */
+.hide-scrollbar {
+  overflow-y: auto; /* Automatically show scrollbar when needed */
+  scrollbar-width: none; /* For Firefox: hide scrollbar */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+ 

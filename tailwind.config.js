@@ -13,6 +13,11 @@ export default {
       animation: {
         rotateInfinite: "rotateInfinite .6s infinite alternate",
       },
+      screens: {
+        mobile: { max: "480px" },
+        tablet: { max: "768px" },
+        miniDesktop: { max: "1079px" },
+      },
     },
   },
   plugins: [],

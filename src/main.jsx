@@ -8,6 +8,7 @@ import Todolist from "./components/Todolist/Todolist.jsx";
 import QuizApp from "./components/QuizApp/QuizApp.jsx";
 import RockPaperScissors from "./components/Rock-Paper-Scissors/RockPaperScissors.jsx";
 import Calculator from "./components/Calculator/Calculator.jsx";
+import ExpenseTracker from "./components/Expense-Tracker/ExpenseTracker.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path:"project-expense-tracker",
+        element:<ExpenseTracker/>
       },
       {
         path:"project-Calculator",

@@ -1,6 +1,11 @@
 export const projectData = [
   // Desc 300 char
   {
+    title:"Expense Tracker",
+    description:"A user-friendly application for tracking income and expenses. Users can add transactions, view current balances, and analyze spending trends. The app features a clean interface with a pop-up form for quick entry, ensuring accurate calculations and seamless updates to financial summaries.",
+    link:"project-expense-tracker"
+  },
+  {
     title:"Calculator",
     description:"This React Calculator component features a simple UI with a title, display, and input buttons for basic arithmetic operations. It manages state with hooks, updating the display based on user input. Functions handle operations like addition, subtraction, and clearing input, ensuring a responsive user experience while preventing errors.",
     link:"project-Calculator"
