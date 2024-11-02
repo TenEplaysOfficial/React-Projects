@@ -1,10 +1,5 @@
 export const projectData = [
-  // Desc 300 char https://tene-e-commerce-website.vercel.app/
-  {
-    title:"Buy Haven",
-    description:"Ecommerce web app need updates",
-    link:" https://tene-e-commerce-website.vercel.app/"
-  },
+  // Desc 300 char
   {
     title:"Expense Tracker",
     description:"A user-friendly application for tracking income and expenses. Users can add transactions, view current balances, and analyze spending trends. The app features a clean interface with a pop-up form for quick entry, ensuring accurate calculations and seamless updates to financial summaries.",
