@@ -41,6 +41,11 @@ const projectsData: Project[] = [
       '@tenedev/toast is a lightweight, customizable React component library for displaying toast notifications. It enables developers to show alerts, success messages, and other notifications in a smooth, non-intrusive way.',
     url: 'package/toast',
   },
+  {
+    title: 'Image Slider',
+    description: 'Image slider',
+    url: 'image-slider',
+  },
 ];
 
 export default projectsData;

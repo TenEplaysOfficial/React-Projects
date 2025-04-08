@@ -12,6 +12,7 @@ const Todo = lazy(() => import('./pages/projects/Todo'));
 const Toaster = lazy(() => import('./components/Toaster'));
 const Toast = lazy(() => import('./pages/package/Toast'));
 const FAQ = lazy(() => import('./pages/projects/FAQ'));
+const ImageSlider = lazy(() => import('./pages/projects/ImageSlider'));
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="todo" element={<Todo />} />
             <Route path="package/toast" element={<Toast />} />
             <Route path="accordion-faq" element={<FAQ />} />
+            <Route path="image-slider" element={<ImageSlider />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
         </Suspense>
