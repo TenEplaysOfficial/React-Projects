@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Allow: /sitemap.xml
+
+Sitemap: https://reactprojectsbytene.vercel.app/sitemap.xml

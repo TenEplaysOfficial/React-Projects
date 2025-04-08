@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"  # You can change it to "daily" or "monthly" depending on your preference
+    versioning-strategy: "increase"  # Options: "increase", "lockfile-only", "auto"
