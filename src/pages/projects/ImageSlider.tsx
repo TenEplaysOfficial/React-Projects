@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { toast } from '../../utils/toast';
+import Head from '../../components/Head';
 
 type Data = (string | { url: string; alt: string })[];
 
@@ -76,6 +77,8 @@ export default function ImageSlider({
   const isFade = animation === 'fade';
 
   return (
+    <>
+      <Head text="Image Slider" />
     <section className="relative h-[650px] w-full overflow-hidden">
       <div
         onMouseEnter={handleMouseEnter}
@@ -125,5 +128,6 @@ export default function ImageSlider({
         </button>
       </div>
     </section>
+    </>
   );
 }
