@@ -43,8 +43,13 @@ const projectsData: Project[] = [
   },
   {
     title: 'Image Slider',
-    description: 'Image slider',
+    description: 'A lightweight, customizable, and responsive slideshow component for React.',
     url: 'image-slider',
+  },
+  {
+    title: 'Compound Component',
+    description: 'A Compound Component is a design pattern in React where multiple components are designed to work together to form a single, cohesive UI element.',
+    url: 'compound-component',
   },
 ];
 
