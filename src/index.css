@@ -30,3 +30,12 @@ input[type='search']::-webkit-search-cancel-button {
   appearance: none;
   display: none;
 }
+
+.para {
+  @apply font-medium;
+}
+
+.dot::before {
+  content: '• ';
+  font-weight: bold;
+}
